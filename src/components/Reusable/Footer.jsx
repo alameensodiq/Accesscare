@@ -1,10 +1,13 @@
 import React from "react";
-import Logo from "../../assets/img/logocare.png"; // Import logo image
+import Logo from "../../assets/img/logocare.png";
+import facebook from "../../assets/icons/facebook.svg";
+import linkdin from "../../assets/icons/Linkedin.svg";
+import twitter from "../../assets/icons/Twitter.svg";
 
 const footerData = {
   contact: {
-    phone: "+1 (234) 567-8901",
-    email: "info@yourdomain.com",
+    phone: "+1 (7635)  XXX XXX",
+    email: "support@access.care",
   },
   quickLinks: [
     { name: "Home", path: "#home" },
@@ -13,16 +16,16 @@ const footerData = {
     { name: "Get Involved", path: "#getinvolved" },
   ],
   socials: [
-    { name: "Facebook", icon: "F", path: "#" },
-    { name: "Twitter", icon: "T", path: "#" },
-    { name: "Instagram", icon: "I", path: "#" },
+    { name: "LinkedIn", icon: linkdin, path: "#" },
+    { name: "Facebook", icon: facebook, path: "#" },
+    { name: "Twitter", icon: twitter, path: "#" },
   ],
   copyright: "© 2024 Access Care. All rights reserved.",
 };
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 border-t border-gray-200">
+    <footer className="bg-[#F6FEFA] py-8">
       <div className="container mx-auto px-4 py-8">
         {/* First Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -36,11 +39,11 @@ const Footer = () => {
                 className="h-12 mb-4" // Adjust height and add margin-bottom
               />
             </div>
-            <p className="mt-2 text-gray-700">
-              <strong>Phone:</strong> {footerData.contact.phone}
+            <p className="mt-2 text-[#0A142F] text-lg font-medium">
+              {footerData.contact.phone}
             </p>
-            <p className="text-gray-700">
-              <strong>Email:</strong> {footerData.contact.email}
+            <p className="text-[#0A142F] text-base font-normal">
+              {footerData.contact.email}
             </p>
           </div>
 
@@ -52,7 +55,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.path}
-                    className="text-gray-600 hover:text-blue-500 transition duration-300"
+                    className="text-[#0A142F] text-base font-normal transition duration-300"
                   >
                     {link.name}
                   </a>
@@ -63,18 +66,31 @@ const Footer = () => {
 
           {/* Column 3: Subscribe to Newsletter */}
           <div>
-            <h3 className="text-lg font-bold text-gray-700 mb-2">Subscribe to Newsletter</h3>
-            <form className="flex space-x-2">
+            <h3 className="text-lg font-bold text-[#0A142F] mb-2">Subscribe to Newsletter</h3>
+            <form className="flex w-full max-w-xs">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-3 py-2 border border-gray-300 rounded-lg flex-grow focus:ring-2 focus:ring-blue-500"
+                className="px-3 py-2 border border-gray-300 rounded-l-lg w-full focus:ring-2 focus:ring-gray-500"
               />
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                className="bg-[#45E99E] text-white px-4 py-2 rounded-r-lg hover:bg-[#45E99E] transition duration-300"
               >
-                Subscribe
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 12h14M12 5l7 7-7 7"
+                  />
+                </svg>
               </button>
             </form>
           </div>
@@ -88,19 +104,24 @@ const Footer = () => {
               <a
                 key={index}
                 href={social.path}
-                className="text-gray-600 hover:text-blue-500 transition duration-300"
+                className="text-gray-600 hover:text-[#45E99E] transition duration-300"
                 aria-label={social.name}
               >
-                {social.icon}
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="h-6 w-6" // You can adjust the size
+                />
               </a>
             ))}
           </div>
 
           {/* Copyright */}
-          <div className="text-gray-600 text-sm">{footerData.copyright}</div>
+          <div className="text-[#0A142F] font-normal text-base">{footerData.copyright}</div>
         </div>
       </div>
     </footer>
+
   );
 };
 
