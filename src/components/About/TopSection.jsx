@@ -34,12 +34,12 @@ const TopSection = () => {
 
                         <img src={dot} alt="Icon 2" />
                     </div>
-                    <div className="w-[40%] flex mr-[17rem] justify-between mt-8">
+                    <div className="w-full lg:w-[40%] flex lg:mr-[17rem] justify-between mt-8">
                         <div
                             className="text-center bg-cover bg-center bg-no-repeat w-32 h-32 rounded-full flex flex-col justify-center items-center"
                             style={{ backgroundImage: `url(${project})` }}
                         >
-                            <p className="font-medium text-5xl text-black">10k+</p>
+                            <p className="font-medium text-3xl md:text-5xl text-black">10k+</p>
                             <p className="text-sm font-normal text-[#4A4A4A]">Projects</p>
                         </div>
 
@@ -47,7 +47,7 @@ const TopSection = () => {
                             className="text-center bg-cover bg-center bg-no-repeat w-32 h-32 rounded-full flex flex-col justify-center items-center"
                             style={{ backgroundImage: `url(${health})` }}
                         >
-                            <p className="font-medium text-5xl text-black">50+</p>
+                            <p className="font-medium text-3xl md:text-5xl text-black">50+</p>
                             <p className="text-sm font-normal text-[#4A4A4A]">Healthcare
                                 <br />  Partners</p>
                         </div>
@@ -56,7 +56,7 @@ const TopSection = () => {
                             className="text-center bg-cover bg-center bg-no-repeat w-32 h-32 rounded-full flex flex-col justify-center items-center"
                             style={{ backgroundImage: `url(${community})` }}
                         >
-                            <p className="font-medium text-5xl text-black">20+</p>
+                            <p className="font-medium text-3xl md:text-5xl text-black">20+</p>
                             <p className="text-sm font-normal text-[#4A4A4A]">
                                 Communities <br /> Served</p>
                         </div>
