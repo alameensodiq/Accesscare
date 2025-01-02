@@ -6,7 +6,7 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Contact Us", path: "/contact" },
-  { name: "Get Involved", path: "/getinvolved" },
+  { name: "Get Involved", path: "/getinvolved" }
 ];
 
 const Navbar = () => {
@@ -22,11 +22,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
         {/* Logo */}
         <div>
-          <img
-            src={Logo}
-            alt="Logo"
-            className="h-12 w-full"
-          />
+          <img src={Logo} alt="Logo" className="h-12 w-full" />
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -52,20 +48,18 @@ const Navbar = () => {
           </button>
         </div>
 
-
         {/* Menu Items */}
         <div className="hidden md:flex space-x-6">
-
-
           <ul className="bg-[#74747414] flex space-x-6  text-[#1D1D1D] px-5 py-2 rounded-full font-normal">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `transition duration-300 ${isActive
-                      ? "text-[#22E27F] font-bold"
-                      : "hover:text-[#22E27F]"
+                    `transition duration-300 ${
+                      isActive
+                        ? "text-[#22E27F] font-bold"
+                        : "hover:text-[#22E27F]"
                     }`
                   }
                 >
@@ -87,15 +81,11 @@ const Navbar = () => {
         </div>
       </div>
 
-
       {/* Mobile Sidebar */}
       {isSidebarOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50">
           <div className="w-3/4 bg-white h-full p-4">
-            <button
-              onClick={toggleSidebar}
-              className="text-[#1D1D1D] p-2 mb-6"
-            >
+            <button onClick={toggleSidebar} className="text-[#1D1D1D] p-2 mb-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
