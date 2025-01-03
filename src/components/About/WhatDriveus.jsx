@@ -29,10 +29,10 @@ const WhatDrivesUs = () => {
     return (
         <div className="py-16 px-8">
             {/* Outer Section */}
-            <div className="container mx-auto">
+            <div className="container mx-auto flex flex-col gap-3">
                 {/* Title */}
                 <h2
-                    className="text-center text-5xl font-bold mb-12"
+                    className="text-4xl md:text-5xl font-bold mb-12"
                     style={{ color: "#1D1D1D" }}
                 >
                     {sectionData.title}
@@ -40,20 +40,19 @@ const WhatDrivesUs = () => {
 
                 {/* Big Card with Background */}
                 <div
-                    className="relative bg-cover bg-no-repeat bg-top rounded-[30px]"
+                    className="relative h-[900px] sm:h-[700px] md:h-[600px] bg-cover bg-no-repeat bg-top rounded-[30px] flex flex-col justify-end items-center"
                     style={{
                         backgroundImage: `url(${sectionData.bigCardBgImage})`,
-                        height: "648px",
                     }}
                 >
                     {/* Small Cards Section */}
-                    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
+                    <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-14 px-4 pb-8">
                         {sectionData.cards.map((card, index) => (
                             <div
                                 key={index}
-                                className="bg-[#FFEAC8] flex flex-col justify-center items-center text-center p-6 rounded-lg shadow-md"
+                                className="h-44 lg:h-56 bg-[#FFEAC8] flex flex-col justify-between p-6 rounded-[20px] shadow-md"
                             >
-                                <h3 className="text-lg font-bold mb-4" style={{ color: "#025788" }}>
+                                <h3 className="text-2xl font-bold mb-4" style={{ color: "#025788" }}>
                                     {card.title}
                                 </h3>
                                 <p className="text-sm" style={{ color: "#025788" }}>

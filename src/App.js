@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact";
-import GetInvolved from "./components/GetInvolved";
+import GetInvolved from "./components/GetInvolved/GetInvolved";
 import Layout from "./components/Layout";
 
 function App() {
