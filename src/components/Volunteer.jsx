@@ -24,15 +24,17 @@ const Volunteer = () => {
           </span>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <span className="lg:text-[14px] md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
+          <span className="lg:text-[30px] lg:w-[99%] text-center md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
             work is fueled by passionate volunteers like you. Whether you’re
-            guiding patients through the ref
+            guiding patients through the ref process, assisting in
+            administrative tasks, or spreading awareness, your time and skills
+            are essential to mission.
           </span>
-          <span className="lg:text-[14px] md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
+          {/* <span className="lg:text-[30px] md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
             process, assisting in administrative tasks, or spreading awareness,
             your time and skills are essential to
           </span>
-          <span className="text-[14px] text-[#ffffff]">mission.</span>
+          <span className="text-[30px] text-[#ffffff]">mission.</span> */}
         </div>
       </div>
       <div className="flex flex-col py-10 gap-3">
@@ -138,7 +140,7 @@ const Volunteer = () => {
               placeholder="Phone Number*"
               className="border-t-0 border-l-0 border-r-0 border-b-2 outline-none"
             />
-            <input
+            {/* <input
               placeholder="Practice/Organization Name *"
               className="border-t-0 border-l-0 border-r-0 border-b-2 outline-none"
             />
@@ -149,7 +151,7 @@ const Volunteer = () => {
             <input
               placeholder="Available Services for Underserved Patients *"
               className="border-t-0 border-l-0 border-r-0 border-b-2 outline-none"
-            />
+            /> */}
           </div>
         </div>
         <div className="flex flex-col gap-2 w-[100%] justify-center items-center">
