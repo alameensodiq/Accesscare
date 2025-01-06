@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../assets/img/logocare.png"; // Import logo image
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
+  { name: "About", path: "/about" },
+  { name: "Services", path: "/services" },
   { name: "Contact Us", path: "/contact" },
-  { name: "Get Involved", path: "/getinvolved" }
+  { name: "Get Involved", path: "/get-involved" }
 ];
 
 const Navbar = () => {
@@ -56,10 +56,9 @@ const Navbar = () => {
                 <NavLink
                   to={link.path}
                   className={({ isActive }) =>
-                    `transition duration-300 ${
-                      isActive
-                        ? "text-[#22E27F] font-bold"
-                        : "hover:text-[#22E27F]"
+                    `transition duration-300 ${isActive
+                      ? "text-[#22E27F] font-bold"
+                      : "hover:text-[#22E27F]"
                     }`
                   }
                 >
@@ -73,7 +72,7 @@ const Navbar = () => {
         {/* Donate Button */}
         <div className="hidden md:flex space-x-6">
           <a
-            href="#donate"
+            href="/donate"
             className="text-[#1d1d1d] border border-[#1D1D1D] px-4 py-2 rounded-lg hover: transition duration-300"
           >
             Donate
@@ -115,7 +114,7 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="#donate"
+                  href="/donate"
                   className="text-[#1D1D1D] text-xl font-normal block"
                   onClick={() => setIsSidebarOpen(false)} // Close sidebar after clicking donate
                 >
