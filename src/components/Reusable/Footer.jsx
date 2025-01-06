@@ -10,10 +10,13 @@ const footerData = {
     email: "support@access.care",
   },
   quickLinks: [
-    { name: "Home", path: "#home" },
-    { name: "About Us", path: "#about" },
-    { name: "Contact Us", path: "#contact" },
-    { name: "Get Involved", path: "#getinvolved" },
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Impact", path: "/impact" },
+    { name: "Donate", path: "/donate" },
+    { name: "News & Event", path: "/news-events" },
+    { name: "Contact Us", path: "/contact" },
+    { name: "Get Involved", path: "/get-involved" },
   ],
   socials: [
     { name: "LinkedIn", icon: linkdin, path: "#" },
@@ -50,7 +53,7 @@ const Footer = () => {
           {/* Column 2: Quick Links */}
           <div>
             <h3 className="text-lg font-bold text-gray-700 mb-2">Quick Links</h3>
-            <ul className="flex flex-wrap space-x-4">
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {footerData.quickLinks.map((link, index) => (
                 <li key={index}>
                   <a
@@ -62,6 +65,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+
           </div>
 
           {/* Column 3: Subscribe to Newsletter */}

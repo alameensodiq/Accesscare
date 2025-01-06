@@ -1,34 +1,40 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'; 
 
-const MakeDifference = ({title1, title2, description}) => {
+const MakeDifference = ({ title1, title2, description }) => {
     return (
-        <div className="container mx-auto py-16 relative">
-
-            <div className="flex lg:flex-row md:flex-col  flex-col justify-between lg:pl-20 lg:pt-15 pt-10">
-                <div className="flex flex-col pt-4">
-                    <h1 className="text-3xl lg:text-5xl  font-bold text-[#11112D] mb-4">
-                         {title1}
-                    </h1>
-                    <h1 className="text-3xl lg:text-5xl font-bold text-[#11112D] mb-4">
-                       {title2}
-                    </h1>
-                </div>
-                <div className="flex flex-col w-[80%] lg:w-[50%] gap-8">
-                    <p className="w-[100%] md:w-2/3 text-left text-lg text-[#11112d] font-normal mb-8">
-                        {description}
-                    </p>
-                    <div className="flex flex-row lg:w-[50%] w-[100%] justify-between gap-4">
-                        <button className="text-white lg:text-[12px] text-[10px] bg-[#45E99E] h-[40px]  rounded-[20px] w-[50%]">
-                            Start Donating Now
-                        </button>
-                        <button className="text-[#45E99E] lg:text-[12px] text-[10px] bg-white h-[40px]  rounded-[20px] w-[50%] border-[#45E99E] border-[1px]">
-                            Become a Volounteer
-                        </button>
-                    </div>
+        <div className="flex lg:flex-row flex-col justify-between mx-8 lg:pl-20 lg:pt-15 pt-10">
+            <div className="w-full flex flex-col gap-3 pt-4 mb-4">
+                <h1 className="text-3xl lg:text-5xl font-bold text-[#11112D]">
+                    {title1}
+                </h1>
+                <h1 className="text-3xl lg:text-5xl font-bold text-[#11112D]">
+                    {title2}
+                </h1>
+            </div>
+            <div className="flex flex-col w-full gap-8">
+                <p className="w-full text-left text-lg text-[#11112d] font-normal">
+                    {description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                    {/* Link to /donate */}
+                    <Link
+                        to="/donate"
+                        className="text-white text-base bg-[#22E27F] px-6 py-3 rounded-full"
+                    >
+                        Start Donating Now
+                    </Link>
+                    {/* Link to /volunteer */}
+                    <Link
+                        to="/volunteer"
+                        className="text-[#22E27F] text-base bg-white px-6 py-3 rounded-full border-[#22E27F] border"
+                    >
+                        Become a Volunteer
+                    </Link>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default MakeDifference
+export default MakeDifference;

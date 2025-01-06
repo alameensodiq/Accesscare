@@ -11,8 +11,10 @@ const Topsection = () => {
                     Get Involved Today
                 </h1>
 
-                <img src={curve} alt="Icon 1"
-                    className="absolute top-0 right-0"
+                <img
+                    src={curve}
+                    alt="Curve Decoration"
+                    className="hidden md:block absolute top-[-20px] right-0 w-[150px] md:w-[200px] lg:w-[250px]"
                 />
             </div>
             <div className="flex flex-col items-center mt-20 relative">
@@ -22,7 +24,7 @@ const Topsection = () => {
 
                 {/* Dot Icon */}
                 <div className='absolute top-0 left-0'>
-                    <img src={dot} alt="Icon 2"  />
+                    <img src={dot} alt="Icon 2" />
                 </div>
 
 

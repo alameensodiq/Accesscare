@@ -5,7 +5,7 @@ import WhatDriveus from "./WhatDriveus";
 import MakeDifference from "../Reusable/MakeDifference";
 
 const About = () => {
-  return <div>
+  return <div className="container mx-auto py-16 relative">
     <TopSection />
     <VisionMission />
     <WhatDriveus />

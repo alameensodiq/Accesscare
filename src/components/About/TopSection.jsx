@@ -14,8 +14,10 @@ const TopSection = () => {
                     About Us
                 </h1>
 
-                <img src={curve} alt="Icon 1"
-                    className="absolute top-0 right-0"
+                <img
+                    src={curve}
+                    alt="Curve Decoration"
+                    className="hidden md:block absolute top-[-20px] right-0 w-[150px] md:w-[200px] lg:w-[250px]"
                 />
 
             </div>
@@ -30,7 +32,7 @@ const TopSection = () => {
                 <div className='w-[100%] flex justify-between'>
                     <div
                     //  className="absolute left-0 top-[50%]"
-                     >
+                    >
 
                         <img src={dot} alt="Icon 2" />
                     </div>

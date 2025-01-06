@@ -7,16 +7,16 @@ const MiddleSetion = () => {
         bigCardBgImage: bigCardBgImage,
         cards: [
             {
-                title: "Volunteer",
-                description: "Dedicate your time and skills.",
+                title: "Partner With Us",
+                description: "Collaborate as a healthcare provider.",
             },
             {
                 title: "Donate",
                 description: "Support our programs and initiatives.",
             },
             {
-                title: "Partner With Us",
-                description: "Collaborate as a healthcare provider.",
+                title: "Volunteer",
+                description: "Dedicate your time and skills.",
             },
         ],
     };
@@ -36,8 +36,8 @@ const MiddleSetion = () => {
                     <div
                         key={index}
                         className={`h-44 lg:h-56 flex flex-col justify-between p-6 rounded-[20px] shadow-md ${index !== 0
-                                ? "bg-transparent border-2 border-white"
-                                : "bg-[#FFCF4E]"
+                            ? "bg-transparent border-2 border-white"
+                            : "bg-[#FFCF4E]"
                             }`}
                     >
                         <h3
@@ -46,12 +46,24 @@ const MiddleSetion = () => {
                         >
                             {card.title}
                         </h3>
-                        <p
-                            className={`text-sm ${index !== 0 ? "text-white" : "text-[#025788]"
-                                }`}
-                        >
-                            {card.description}
-                        </p>
+                        {/* Wrapper for description and button */}
+                        <div className="flex flex-col gap-4">
+                            <p
+                                className={`text-sm ${index !== 0 ? "text-white" : "text-[#025788]"
+                                    }`}
+                            >
+                                {card.description}
+                            </p>
+                            {/* Add button for "Partner With Us" */}
+                            {card.title === "Partner With Us" && (
+                                <a
+                                    href="/partners"
+                                    className="text-white bg-[#025788] px-4 py-2 rounded-full text-sm text-center hover:bg-[#023d57] transition"
+                                >
+                                    Learn More
+                                </a>
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>
