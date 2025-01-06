@@ -9,6 +9,7 @@ import NewsEvent from "./components/NewsEvent";
 import Faqs from "./components/Faqs/Faqs";
 import Donate from "./components/Donate/Donate";
 import Services from "./components/Services/Services";
+import Volunteer from "./components/Volunteer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
 
         <Route path="/news-event" element={<NewsEvent />} />
+        <Route path="/volunteer" element={<Volunteer />} />
       </Routes>
     </Layout>
   );
