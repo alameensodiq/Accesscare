@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../assets/img/logocare.png"; // Import logo image
 
 const navLinks = [
+  { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
+  { name: "Impact", path: "/impact" },
   { name: "Contact Us", path: "/contact" },
   { name: "Get Involved", path: "/get-involved" }
 ];
