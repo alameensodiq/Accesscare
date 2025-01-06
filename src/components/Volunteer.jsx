@@ -138,7 +138,7 @@ const Volunteer = () => {
               placeholder="Phone Number*"
               className="border-t-0 border-l-0 border-r-0 border-b-2 outline-none"
             />
-            <input
+            {/* <input
               placeholder="Practice/Organization Name *"
               className="border-t-0 border-l-0 border-r-0 border-b-2 outline-none"
             />
@@ -149,7 +149,7 @@ const Volunteer = () => {
             <input
               placeholder="Available Services for Underserved Patients *"
               className="border-t-0 border-l-0 border-r-0 border-b-2 outline-none"
-            />
+            /> */}
           </div>
         </div>
         <div className="flex flex-col gap-2 w-[100%] justify-center items-center">
