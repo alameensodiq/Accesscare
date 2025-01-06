@@ -24,17 +24,15 @@ const Volunteer = () => {
           </span>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <span className="lg:text-[30px] lg:w-[99%] text-center md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
+          <span className="lg:text-[14px] md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
             work is fueled by passionate volunteers like you. Whether you’re
-            guiding patients through the ref process, assisting in
-            administrative tasks, or spreading awareness, your time and skills
-            are essential to mission.
+            guiding patients through the ref
           </span>
-          {/* <span className="lg:text-[30px] md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
+          <span className="lg:text-[14px] md:text-[14px] sm:text-[14px] text-[10px] text-[#ffffff]">
             process, assisting in administrative tasks, or spreading awareness,
             your time and skills are essential to
           </span>
-          <span className="text-[30px] text-[#ffffff]">mission.</span> */}
+          <span className="text-[14px] text-[#ffffff]">mission.</span>
         </div>
       </div>
       <div className="flex flex-col py-10 gap-3">
