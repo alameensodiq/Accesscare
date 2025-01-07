@@ -1,5 +1,5 @@
 import React from "react";
-import bigCardBgImage from "../../assets/img/bgwhatdrives.jpeg";
+import bigCardBgImage from "../../assets/img/bg.jpeg";
 
 const WhatDrivesUs = () => {
     const sectionData = {
@@ -40,13 +40,15 @@ const WhatDrivesUs = () => {
 
                 {/* Big Card with Background */}
                 <div
-                    className="relative h-[900px] sm:h-[700px] md:h-[600px] bg-cover bg-no-repeat bg-top rounded-[30px] flex flex-col justify-end items-center"
+                    className="relative h-[900px] sm:h-[700px] md:h-[600px] bg-cover bg-no-repeat bg-center rounded-[30px] flex flex-col justify-end items-center"
                     style={{
                         backgroundImage: `url(${sectionData.bigCardBgImage})`,
                     }}
                 >
+                    <div className="absolute inset-0 bg-black opacity-50 rounded-[30px]"></div>
+
                     {/* Small Cards Section */}
-                    <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-14 px-4 pb-8">
+                    <div className="w-full z-10 max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-14 px-4 pb-8">
                         {sectionData.cards.map((card, index) => (
                             <div
                                 key={index}

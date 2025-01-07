@@ -9,6 +9,7 @@ import NewsEvent from "./components/NewsEvent";
 import Faqs from "./components/Faqs/Faqs";
 import Donate from "./components/Donate/Donate";
 import Services from "./components/Services/Services";
+import GetStarted from "./components/GetStarted/GetStarted";
 import Volunteer from "./components/Volunteer";
 import Partner from "./components/Partner";
 import Impact from "./components/Impact";
@@ -24,6 +25,8 @@ function App() {
 
         <Route path="/contact" element={<Contact />} />
         <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/get-started" element={<GetStarted />} />
+
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/donate" element={<Donate />} />

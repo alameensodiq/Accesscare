@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 
 const MakeDifference = () => {
@@ -30,19 +30,23 @@ const MakeDifference = () => {
                 </ul>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                    {/* Link to /donate */}
-                    <Link
-                        to="/donate"
-                        className="text-white text-base bg-[#22E27F] px-6 py-3 rounded-full"
-                    >
-                        Start Donating Now
-                    </Link>
-                    {/* Link to /volunteer */}
                     <Link
                         to="/volunteer"
-                        className="text-[#22E27F] text-base bg-white px-6 py-3 rounded-full border-[#22E27F] border"
+                        className="text-black text-base bg-[#22E27F] px-6 py-3 rounded-full"
                     >
-                        Become a Volunteer
+                        Volunteer Now
+                    </Link>
+                    <Link
+                        to="/donate"
+                        className="text-black text-base bg-white px-6 py-3 rounded-full border-[#22E27F] border"
+                    >
+                        Donate Now
+                    </Link>
+                    <Link
+                        to="/partner"
+                        className="text-black text-base bg-white px-6 py-3 rounded-full border-[#22E27F] border"
+                    >
+                        Partner with us
                     </Link>
                 </div>
             </div>
