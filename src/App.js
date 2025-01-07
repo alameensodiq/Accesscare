@@ -12,6 +12,7 @@ import Services from "./components/Services/Services";
 import GetStarted from "./components/GetStarted/GetStarted";
 import Volunteer from "./components/Volunteer";
 import Partner from "./components/Partner";
+import Impact from "./components/Impact";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/news-event" element={<NewsEvent />} />
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/partner" element={<Partner />} />
+        <Route path="/impact" element={<Impact />} />
       </Routes>
     </Layout>
   );
