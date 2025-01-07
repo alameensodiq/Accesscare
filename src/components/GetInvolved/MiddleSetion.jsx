@@ -1,5 +1,5 @@
 import React from "react";
-import bigCardBgImage from "../../assets/img/bgwhatdrives.jpeg";
+import bigCardBgImage from "../../assets/img/bg2.jpeg";
 
 const MiddleSetion = () => {
     const sectionData = {
@@ -7,23 +7,24 @@ const MiddleSetion = () => {
         bigCardBgImage: bigCardBgImage,
         cards: [
             {
-                title: "Partner With Us",
-                description: "Collaborate as a healthcare provider.",
+                title: "Volunteer",
+                description: "Dedicate your time and skills.",
             },
+
             {
                 title: "Donate",
                 description: "Support our programs and initiatives.",
             },
             {
-                title: "Volunteer",
-                description: "Dedicate your time and skills.",
+                title: "Partner With Us",
+                description: "Collaborate as a healthcare provider.",
             },
         ],
     };
 
     return (
         <div
-            className="relative h-[900px] sm:h-[700px] mx-8 md:h-[600px] bg-cover bg-no-repeat bg-top rounded-[30px] mt-12 flex flex-col justify-end items-center"
+            className="relative h-[900px] sm:h-[700px] mx-8 md:h-[600px] bg-cover bg-no-repeat bg-center rounded-[30px] mt-12 flex flex-col justify-end items-center"
             style={{
                 backgroundImage: `url(${sectionData.bigCardBgImage})`,
             }}
@@ -54,15 +55,6 @@ const MiddleSetion = () => {
                             >
                                 {card.description}
                             </p>
-                            {/* Add button for "Partner With Us" */}
-                            {card.title === "Partner With Us" && (
-                                <a
-                                    href="/partners"
-                                    className="text-white bg-[#025788] px-4 py-2 rounded-full text-sm text-center hover:bg-[#023d57] transition"
-                                >
-                                    Learn More
-                                </a>
-                            )}
                         </div>
                     </div>
                 ))}
