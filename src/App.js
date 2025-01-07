@@ -10,6 +10,8 @@ import Faqs from "./components/Faqs/Faqs";
 import Donate from "./components/Donate/Donate";
 import Services from "./components/Services/Services";
 import GetStarted from "./components/GetStarted/GetStarted";
+import Volunteer from "./components/Volunteer";
+import Partner from "./components/Partner";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/donate" element={<Donate />} />
 
         <Route path="/news-event" element={<NewsEvent />} />
+        <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/partner" element={<Partner />} />
       </Routes>
     </Layout>
   );
