@@ -28,7 +28,7 @@ const services = [
             "Build a robust network of providers committed to healthcare equity.",
         ],
         buttonText: "Partner With Us",
-        buttonLink: "/partners",
+        buttonLink: "/partner",
     },
     {
         title: "Educational Outreach",
