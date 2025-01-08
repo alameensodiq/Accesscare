@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import patterns from "../../assets/icons/patterns.svg";
 
 
 const DonateForm = () => {
@@ -10,26 +11,26 @@ const DonateForm = () => {
         {
             amount: 25,
             description: "Provides a referral to a healthcare provider for a patient in need.",
-            bgColor: "#F9EFCC",
-            borderColor: "#FFCF4E",
+            bgColor: "#F9DFDD",
+            borderColor: "#F9DFDD",
         },
         {
             amount: 50,
             description: "Provides a referral to a healthcare provider for a patient in need.",
-            bgColor: "#F6FEFA",
-            borderColor: "#929593",
+            bgColor: "#F6FEE8",
+            borderColor: "#CBE1A4",
         },
         {
             amount: 100,
             description: "Helps maintain and expand our patient referral system, improving the process for more individuals.",
-            bgColor: "#F6FEFA",
-            borderColor: "#929593",
+            bgColor: "#F9EFCC",
+            borderColor: "#F9EFCC",
         },
         {
             title: "Custom Donation",
             description: "Every donation counts, regardless of the amount.",
-            bgColor: "#F6FEFA",
-            borderColor: "#929593",
+            bgColor: "#C3F9F4",
+            borderColor: "#C3F9F4",
         },
     ];
 
@@ -56,39 +57,36 @@ const DonateForm = () => {
                     <h2 className="text-4xl md:text-5xl font-semibold text-[#11112D] mb-8 text-center">
                         How Your Donation Makes an Impact
                     </h2>
-                    <div className="w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div className="relative w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         {donationOptions.map((option, index) => (
                             <div
                                 key={index}
                                 onClick={() => handleDonationClick(option.amount || "custom")}
-                                className={`cursor-pointer p-6 rounded-lg border-2 ${selectedAmount === option.amount || (selectedAmount === "custom" && index === 3)
-                                    ? "border-[#22E27F]"
-                                    : `border-[${option.borderColor}]`
-                                    }`}
-                                style={{ backgroundColor: option.bgColor }}
+                                className={`cursor-pointer p-6 rounded-lg border-2`
+                                }
+                                style={{ backgroundColor: option.bgColor, borderColor: option.borderColor }}
                             >
                                 {option.amount ? (
-                                    <h3 className="text-2xl font-bold text-[#11112D] mb-4">
+                                    <h3 className="text-2xl text-center font-bold text-[#11112D] mb-4">
                                         ${option.amount}
                                     </h3>
                                 ) : (
-                                    <h3 className="text-2xl font-bold text-[#11112D] mb-4">
+                                    <h3 className="text-2xl text-center font-bold text-[#11112D] mb-4">
                                         {option.title}
                                     </h3>
                                 )}
-                                <p className="text-[#43474F] text-sm leading-relaxed">{option.description}</p>
-                                {/* {index === 3 && (
-                                    <input
-                                        type="number"
-                                        placeholder="Enter custom amount"
-                                        className="w-full mt-4 px-4 py-2 border border-[#929593] rounded-lg focus:outline-none focus:border-[#22E27F]"
-                                        value={customAmount}
-                                        onChange={handleCustomAmountChange}
-                                    />
-                                )} */}
+                                <p className="text-[#43474F] text-center text-sm leading-relaxed">{option.description}</p>
                             </div>
                         ))}
+
+                        {/* Image positioned outside the entire container */}
+                        <img
+                            src={patterns}
+                            alt="pattern"
+                            className="absolute bottom-[-75px] left-[-60px] w-20 h-20"
+                        />
                     </div>
+
                 </div>
             </div>
             <div className="container mx-auto py-8 relative">
@@ -109,7 +107,7 @@ const DonateForm = () => {
                             {/* Link to /donate */}
                             <Link
                                 to="/donate"
-                                className="text-white text-base bg-[#22E27F] px-6 py-3 rounded-full"
+                                className="text-black text-base bg-[#22E27F] px-6 py-3 rounded-full"
                             >
                                 Donating Now
                             </Link>

@@ -7,6 +7,8 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Impact", path: "/impact" },
+  { name: "Donate", path: "/donate" },
+
   { name: "Contact Us", path: "/contact" },
   { name: "Get Involved", path: "/get-involved" }
 ];
@@ -74,10 +76,10 @@ const Navbar = () => {
         {/* Donate Button */}
         <div className="hidden md:flex space-x-6">
           <a
-            href="/donate"
-            className="text-[#1d1d1d] border border-[#1D1D1D] px-4 py-2 rounded-lg hover: transition duration-300"
+            href="/get-started"
+            className="text-[#1d1d1d] bg-[#45E99E]  px-4 py-2 rounded-full hover: transition duration-300"
           >
-            Donate
+            Get Started
           </a>
         </div>
       </div>
@@ -116,11 +118,11 @@ const Navbar = () => {
               ))}
               <li>
                 <a
-                  href="/donate"
+                  href="/get-started"
                   className="text-[#1D1D1D] text-xl font-normal block"
                   onClick={() => setIsSidebarOpen(false)} // Close sidebar after clicking donate
                 >
-                  Donate
+                  Get Started
                 </a>
               </li>
             </ul>
