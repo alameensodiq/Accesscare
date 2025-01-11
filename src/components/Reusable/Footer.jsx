@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Newsletter Form */}
           <div>
             <form className="flex flex-col gap-3">
-              <div className="flex">
+              <div className="flex flex-col md:flex-row gap-3">
                 <input
                   type="email"
                   placeholder="Enter your email"

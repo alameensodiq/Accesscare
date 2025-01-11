@@ -20,13 +20,12 @@ const VisionMission = () => {
     return (
         <div
             className="py-16 px-8 bg-[#F6FEFA] h-auto"
-        //   style={{ backgroundColor: "#F6FEFA" }}
         >
             <div className="container mx-auto flex flex-col md:flex-row justify-between gap-8">
                 {cards.map((card, index) => (
                     <div
                         key={index}
-                        className="md:h-[300px] lg:h-[250px] flex flex-col justify-between items-start p-8 rounded-[30px] shadow-md"
+                        className="md:h-[300px] lg:h-[250px] md:w-1/2 flex flex-col justify-between items-start p-8 rounded-[30px]"
                         style={{ backgroundColor: card.bgColor }}
                     >
                         <h3 className="text-3xl md:text-5xl font-medium mb-4 text-[#025788]">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MakeDifference = ({ title1, title2, description }) => {
     return (
-        <div className="flex lg:flex-row flex-col justify-between mx-8 lg:pl-20 lg:pt-15 pt-10">
+        <div className="container mx-auto flex lg:flex-row flex-col justify-between lg:pl-20 lg:pt-15 pt-10">
             <div className="w-full flex flex-col gap-3 pt-4 mb-4">
                 <h1 className="text-3xl lg:text-5xl font-bold text-[#11112D]">
                     {title1}

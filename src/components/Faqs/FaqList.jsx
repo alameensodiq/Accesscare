@@ -3,6 +3,12 @@ import minusIcon from "../../assets/icons/minus.svg";
 import plusIcon from "../../assets/icons/plus.svg";
 
 const FaqList = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   const faqs = [
     {
       question: "What is AccessCareConnect Referral Foundation?",
@@ -31,11 +37,7 @@ const FaqList = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
 
   return (
     <div className="w-full max-w-4xl mx-auto py-16 px-4">
@@ -43,9 +45,8 @@ const FaqList = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`overflow-hidden ${
-              index === faqs.length - 1 ? "" : "border-b border-[#EAECF0]"
-            }`}
+            className={`overflow-hidden ${index === faqs.length - 1 ? "" : "border-b border-[#EAECF0]"
+              }`}
           >
             {/* Question Section */}
             <button
