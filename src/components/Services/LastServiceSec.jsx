@@ -35,7 +35,7 @@ const LastServiceSec = () => {
                         {/* Link to /donate */}
                         <Link
                             to="/get-involved"
-                            className="text-white text-base bg-[#22E27F] px-6 py-3 rounded-full"
+                            className="text-[0A142F] text-base bg-[#22E27F] px-6 py-3 rounded-full"
                         >
                             Get Involved
                         </Link>

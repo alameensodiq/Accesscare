@@ -27,7 +27,7 @@ const WhatDrivesUs = () => {
     };
 
     return (
-        <div className="py-16 px-8">
+        <div className="container mx-auto py-16 px-8">
             {/* Outer Section */}
             <div className="container mx-auto flex flex-col gap-3">
                 {/* Title */}
